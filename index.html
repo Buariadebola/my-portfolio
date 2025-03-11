@@ -734,30 +734,37 @@ pageUp.addEventListener('click', () => {
 	window.scrollTo({ top: 0, behavior: 'smooth'});
 });
 
+// Get the button and section elements
 const aboutMe = document.querySelector('.about-me');
+const about = document.getElementById('about');
 
+// Add event listener to button
 aboutMe.addEventListener('click', () => {
-	window.scrollTo({ top: 550, behavior: 'smooth'});
+  // Scroll to target section
+  about.scrollIntoView({ behavior: 'smooth' });
 });
 
+
 const myProjects = document.querySelector('.my-projects');
+const myProject = document.querySelector('.my-project');
 
 myProjects.addEventListener('click', () => {
-	window.scrollTo({ top: 795, behavior: 'smooth'});
+	myProject.scrollIntoView({behavior: 'smooth'});
 });
 
 const myUidesigns = document.querySelector('.my-uiprojects');
+const myDesign = document.querySelector('.ui-projects');
 
 myUidesigns.addEventListener('click', () => {
-	window.scrollTo({ top: 1600, behavior: 'smooth'});
+	myDesign.scrollIntoView({behavior: 'smooth'});
 });
 
 const mySocials = document.querySelector('.my-socials');
+const social = document.getElementById('social');
 
 mySocials.addEventListener('click', () => {
-	window.scrollTo({ top: 2470, behavior: 'smooth'});
+	social.scrollIntoView({ behavior: 'smooth'});
 });
-
 </script>
 </body>
 </html>
