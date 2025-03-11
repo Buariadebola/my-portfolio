@@ -4,8 +4,747 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>portfolio website</title>
+	<style type="text/css">
+		body{
+	font-family: arial, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+header{
+	background-image: linear-gradient(to bottom, rgba(11, 35, 81, 1.0) 35%, blue);
+	margin-bottom: 100px;
+	padding-bottom: 90px;
+}
+header h1{
+	text-align: center;
+	padding-top: 10px;
+	color: white;
+}
+footer{
+	background-color: rgb(18, 18, 18);
+	color: blue;
+	height: 32px;
+	text-align: center;
+	font-size: 17px;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+section{
+	padding: 2em;
+}
+h1{
+	margin: 0;
+}
+.box img{
+	justify-content: center;
+	width: 40px;
+	height: 40px;
+	border-radius: 50px;
+	padding: 5px;
+}
+.box{
+	align-self: center;
+	transition: transform 1s ease-in-out;
+	display: flex;
+	position: absolute;
+	top:73%;
+	left: 42%;
+	width: calc(180px + 2vw);
+	height: auto;
+	border: 2px solid rgba(11, 35, 81, 1.0);
+	background-color:#f5f5dc;
+	border-radius: 20px;
+}
+.box{
+  animation: bouncing-logo 2s ease infinite;
+}
+
+@keyframes bouncing-logo {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@media only screen and (max-width: 768px){
+	.box{
+		top: 100%;
+		left: 33%;
+	}
+}
+
+.box p{
+	line-height: 0.2;
+}
+.info{
+	justify-content: center;
+	justify-items: center;
+	font-size:calc(8px + 0.6vw);
+	width: 70%;
+	text-align: center;
+}
+.box-img{
+	width: 30%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.box:hover {
+	top:62%;
+	transform: scale(1);
+	display: inline-block;
+	height: auto;
+}
+.box:hover{
+  animation: bouncing-logo 2s ease infinite;
+}
+
+@keyframes bouncing-logo {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@media only screen and (max-width: 768px){
+	.box:hover{
+		top: 90%;
+	}
+}
+.box:hover .box-img{
+	animation: hover-effect 0.5s ease-in-out;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+}
+.box:hover .info{
+	width: 100%;
+	text-align: center;
+}
+.box:hover img{
+	width: 120px;
+	height: 120px;
+	border-radius: 10px;
+}
+#welcome{
+	top: 10;
+	font-size: calc(20px + 1vw);
+}
+#welcome{
+  animation: sliding-text 1.5s ease-out;
+}
+
+@keyframes sliding-text {
+  0% {
+    transform: translatey(-150%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+#home{
+	background-position: 0% 100%;
+	height: auto;
+	text-align: center;
+	color: #fff;
+}
+#about{
+	border: 3px solid midnightblue;
+	padding: 30px;
+	background-color: midnightblue;
+	color: white;
+	width: 85%;
+	margin: auto;
+	border-radius: 50px;
+	transition: padding 0.5s ease-in-out;
+}
+#about:hover{
+	padding: 40px;
+	border-radius: 50px;
+}
+@media only screen and (max-width: 768px){
+	#about{
+		width: 70%;
+	}
+}
+#about p{
+	line-height: 1.5;
+	font-size: calc(8px + 0.6vw);
+}
+#about h1{
+	font-size: calc(17px + 0.6vw);
+}
+.project-header{
+	margin: 40px;
+	padding-top: 15px;
+	font-size: calc(20px + 0.6vw);
+	color: rgba(11, 35, 81, 1.0);
+}
+.my-project{
+	background-color: #c1c1c1;
+	padding-top: 0;
+
+}
+#projects{
+	margin: auto;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr) ;
+	grid-gap: 20px;
+}
+@media only screen and (max-width: 768px){
+	#projects{
+		grid-template-columns: 1fr;
+	}
+}
+.project{
+	display: inline-block;
+	border-image: linear-gradient(to bottom, blue, #00ff00) 1;
+	border-width: 5px;
+	border-style: solid;
+	width: calc(90% - 20px);
+	background-color: white;
+	padding: 20px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+	transition: padding 0.5s ease-in-out;
+}
+@media only screen and (max-width: 768px){
+	.project{
+		margin-bottom: 30px;
+	}
+}
+.project:hover {
+	padding: 30px;
+}
+
+.project p{
+	line-height: 1.3;
+	font-size: calc(9px + 0.4vw);
+	color: midnightblue;
+}
+.project h2{
+	font-size: calc(16px + 0.6vw);
+	color: blue;
+}
+.project img{
+	display: flex;
+	margin: 0 auto;
+	width: 95%;
+	height: auto;
+	object-fit: cover;
+	border-radius: 10px;
+	border: 2px solid blue;
+}
+#intro{
+	overflow-wrap: break-word;
+	margin-top: 20px;
+	line-height: 0;
+	display: inline-block;
+	border-radius: 20px;
+	width: 55%;
+	height: auto;
+	background-color: #f5f5dc;
+	padding: 5px;
+	color: darkblue;
+	box-shadow: -20px 20px 3px rgba(0, 0, 0, 0.4);
+}
+
+#intro{
+  animation: sliding-button 2s ease-out;
+}
+
+@keyframes sliding-button {
+  0% {
+    transform: translateX(-500px);
+  }
+  50% {
+    transform: translatex(0);
+  }
+}
+
+#intro h2{
+	font-size: calc(16px + 0.6vw);
+	line-height: 1;
+}
+#intro h4{
+	font-size: calc(10px + 0.6vw);
+	line-height: 1;
+}
+#intro p{
+	text-align: left;
+	line-height: 1;
+	font-size: calc(8px + 0.6vw);
+}
+#id{
+	font-size: 15px;
+}
+.intro-wrapper{
+	justify-items: center;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 10px;
+}
+@media only screen and (max-width: 768px){
+	.intro-wrapper{
+		grid-template-columns: 1fr;
+	}
+}
+#social{
+	background-image: linear-gradient(to top, rgb(18, 18, 18) 50%, #292929);
+}
+#social a {
+	text-decoration: none;
+}
+.socials{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	padding: 20px;
+	justify-content: center;
+	margin-bottom: 50px;
+}
+@media only screen and (max-width: 768px){
+	.socials{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+}
+}
+#social h1{
+	color: rgba(0, 157, 255, 1.0);
+}
+.x{
+	text-align: center;
+	flex-basis: 33.33%;
+	color: black;
+	transition: padding 0.5s ease-in-out;
+}
+.x img {
+	width: calc(85% + 1vw);
+	height: auto;
+}
+.x img:hover{
+	margin-left: 10px;
+	width: calc(85% + 1vw);
+	height: auto;
+	box-shadow: -10px 10px 3px rgba(0, 0, 0, 0.4);
+}
+.x h3{
+	font-size: calc(16px + 0.4vw);
+	color: #fff;
+}
+.x button {
+            background-color: white;
+            color: black;
+            padding: 5px;
+            width: 100px;
+            border-radius: 20px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .x button:hover {
+            background-color: rgb(145, 145, 145);
+        }
+.instagram{
+	text-align: center;
+	flex-basis: 33.33%;
+	color: red;
+}
+.instagram img {
+	width: calc(85% + 1vw);
+	height: auto;
+	transition: padding 0.5s ease-in-out;
+}
+.instagram img:hover{
+	margin-left: 10px;
+	width: calc(85% + 1vw);
+	height: auto;
+	box-shadow: -10px 10px 3px rgba(0, 0, 0, 0.4);
+}
+.instagram h3{
+	font-size: calc(16px + 0.4vw);
+}
+.instagram button {
+            background-color: rgb(255, 96, 96);
+            color: white;
+            padding: 5px;
+            width: 100px;
+            border-radius: 20px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .instagram button:hover {
+            background-color: rgb(255, 0, 0);
+        }
+.facebook{
+	text-align: center;
+	flex-basis: 33.33%;
+	color: blue;
+}
+.facebook img {
+	width: calc(85% + 1vw);
+	height: auto;
+	transition: padding 0.5s ease-in-out;
+}
+.facebook img:hover{
+	margin-left: 10px;
+	width: calc(85% + 1vw);
+	height: auto;
+	box-shadow: -10px 10px 3px rgba(0, 0, 0, 0.4);
+}
+.facebook h3{
+	font-size: calc(16px + 0.4vw);
+}
+.facebook button {
+            background-color: rgb(0, 170, 255);
+            color: white;
+            padding: 5px;
+            width: 100px;
+            border-radius: 20px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .facebook button:hover {
+            background-color: blue;
+        }
+.contact-button{
+	color: blue;
+	display: flex;
+	margin: 0 auto;
+	padding: 18px;
+	border-radius: 30px;
+	background-color: white;
+	border: 3px solid blue;
+	transition: 0.4s ease-in-out;
+}
+.contact-button:hover{
+	text-decoration: underline;
+	font-size: 15px;
+}
+.page-up{
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	cursor: pointer;
+	color: rgba(11, 35, 81, 1.0);
+	padding: 5px 5px;
+	background-color: rgba(0, 157, 255, 1.0);
+	border-radius: 10px;
+	font-size: 10px;
+	border: 2px solid rgba(11, 35, 81, 1.0);
+	transition: padding 0.5s ease-in-out;
+	animation: bouncing-logo 2s ease infinite;
+}
+@keyframes bouncing-logo {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.page-up img{
+	height: 15px;
+	width: 20px;
+}
+.page-up:hover {
+	background-color: rgb(21, 21, 199);
+	padding: 7px 7px;
+}
+.menu-button{
+	position: fixed;
+	top: 20px;
+	left: 20px;
+	cursor: pointer;
+	color: rgba(11, 35, 81, 1.0);
+	background-color: rgba(0, 157, 255, 1.0);
+	border-radius: 10px;
+	font-size: 10px;
+	border: 2px solid rgba(11, 35, 81, 1.0);
+	transition: padding 0.5s ease-in-out;
+}
+.menu-button{
+  animation: bouncing-logo 2s ease infinite;
+}
+
+@keyframes bouncing-logo {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.menu-button img{
+	height: 30px;
+	width: 35px;
+}
+.menu-button:hover {
+	background-color: mediumblue;
+	padding: 2px;
+}
+.dropdown{
+	position: fixed;
+	list-style: none;
+	text-decoration: none;
+	top: 60px;
+	left: 20px;
+	background-color: mediumblue;
+	display: none;
+	padding: 10px;
+	border-radius: 5px;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+.dropdown:hover{
+	padding: 15px;
+}
+.dropdown a{
+	text-decoration: none;
+	padding: 10px 20px;
+	color: white;
+}
+.dropdown a:hover{
+	background-color: rgb(2, 5, 70);
+}
+.dropdown.show{
+	display: block;
+}
+h5{
+	color: black;
+	text-align: center;
+	font-family: arial black;
+	font-size: calc(17px + 0.4vw);
+}
+.menu ul li{
+	list-style: none;
+}
+.ui-projects{
+	margin: 0;
+}
+.ui-projects h1{
+	font-size: calc(17px + 0.8vw);
+	margin: 20px;
+	color: rgba(11, 35, 81, 1.0);
+}
+.my-design{
+	width: calc(90% - 20px);
+	margin-top: 30px;
+	margin-left: 0;
+	margin-right: 0;
+}
+.my-design img{
+	margin: 0;
+	width: 100%;
+}
+.ui-designs{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	margin: 0;
+}
+@media only screen and (max-width: 768px){
+	.ui-designs{
+		grid-template-columns: 1fr;
+	}
+}@media only screen and (max-width: 768px){
+	.my-design img{
+		display: flex;
+		margin: 0 auto;
+		width: 90%;
+}
+}
+#download{
+	text-decoration: none;
+}
+.download-button{
+	display: flex;
+	margin: 0 auto;
+	padding: 18px;
+	border-radius: 30px;
+	background-image: linear-gradient(to right, rgb(55, 196, 252), lime);
+	border: 0;
+	transition: 0.4s ease-in-out;
+}
+.download-button:hover{
+	padding: 22px;
+	border-radius: 35px;
+	background-image: linear-gradient(to right, rgb(0, 183, 255), rgb(15, 197, 15));
+}
+	</style>
 </head>
 <body>
-  welcome
+	<header>
+		<h1 id="welcome">Welcome to my portfolio</h1>
+<section id="home">
+	<div class="intro-wrapper">
+	<div id="intro">
+		<h2>My Technical Expertise</h2>
+		<ul>
+			<li>
+				<p>Basic web designs (HTML and CSS)</p>
+			</li>
+			<li>
+				<p>Javascript</p>
+			</li>
+			<li>
+				<p>Tailwind CSS</p>
+			</li>
+			<li>
+				<p>PHP</p>
+			</li>
+			<li>
+				<p>UI/UX design (Figma)</p>
+			</li>
+
+		</ul>
+	</div>
+	<div id="intro">
+		<h2>Qualifications</h2>
+		<ul>
+			<li>
+				<h4>National Deploma (ND)</h4>
+				<p1>-----</p1>
+			</li>
+			<li><h4>Bachelor of Science (BSc)</h4>
+				<p1>-----</p1>
+			</li>
+			<li>
+				<p>Currently a ND student (computer science)</p>
+			</li>
+		</ul>
+	</div>
+</div>
+</section>
+</header>
+<div class="page-up"><img src="images/right.png"></div>
+<div class="menu">
+	<ul>
+<li><a class="menu-button"><img src="images/menu1.png"></a>
+		<ul class="dropdown">
+			<li><a href="#" id="about-me" class="about-me">About me</a></li>
+			<hr>
+			<li><a href="#" class="my-projects">My projects</a></li>
+			<hr>
+			<li><a href="#" class="my-uiprojects">My UI/UX designs</a></li>
+			<hr>
+			<li><a href="#" class="my-socials">My socials</a></li>
+			<hr>
+			<li><a href="contactpage.html" class="contact-me">Contact me</a></li>
+		</ul>
+	</li>
+	</ul>
+</div>
+<div class="box"><div class="box-img"><img src="images/hey.jpg"></div><div class="info"><p>Buari Adebola</p><p>Web Developer</p></div></div>
+<section id="about"><h1>About me</h1>
+	<p>Hi, i'm Adebola, a passionate web designer dedicated to crafting exceptional digital experience. With a keen eye for detail and love for innovation, i help businesses and individuals bring their online presence to life. My goal is to deliver tailored solution to meet the unique needs of each client </p>
+	<p>Contact me now and let's get your website done!</p>
+</section>
+<section class="my-project">
+<h1 class="project-header">My recent projects</h1>
+<div id="projects">
+		<div class="project"><abbr title="click to view photo"><a href="images/progaming.png"><img src="images/progaming.png"></a></abbr>
+			<h2>Game Registration website</h2>
+			<hr>
+			<p>This is a web-based registeration platform designed for gamers to sign up, form teams, and participate in competitions. The application features a responsive sidebar, a homepage, an about page, and a contact dropdown menu enabling users to communicate with administrators. Additionally, the platform includes data entry sections where users can input their information.</p>
+			<hr>
+			<p>HTML, CSS, Javascript</p>
+		</div>
+		<div class="project"><abbr title="click to view photo"><a href="images/ebook.png"><img src="images/ebook.png" alt="project 2"></a></abbr>
+			<h2>E-Library Website</h2>
+			<hr>
+			<p>This is a digital library platform designed to catalog and provide access to a diverse collection of e-books across various genres. The platform boasts an intuitive users interface with seamless navigation, comprising a secure login page, a dynamic home page with easy navigation menus, and a footer section displaying contact information. Key features include a search bar, a genre-based filtering system, enabling users to discover books by category, and a blog webpage dedicated to sharing the latest news and updates from the world of digital publishing.</p><a href="ebookvid.mp4">watch video</a>
+			<hr>
+			<p>HTML, CSS, Javascript</p>
+		</div>
+	</div>
+</section>
+<section class="ui-projects">
+	<h1>My UI/UX designs</h1>
+	<div class="ui-designs">
+		<div class="my-design"><a href="images/barcablog.png"><img src="images/barcablog.png"></a>
+		</div>
+		<div class="my-design"><a href="images/ebookhub.png"><img src="images/ebookhub.png"></a>
+		</div>
+		<div class="my-design"><a href="images/gaming.png"><img src="images/gaming.png"></a>
+		</div>
+	</div>
+	<br>
+	<br>
+	<h5>DOWNLOAD MY CV</h5>
+	<a href="debola's CV.docx" download="debola's CV.docx" id="download"><button class="download-button">DOWNLOAD</button></a>
+</section>
+<section id="social"><h1>My socials</h1>
+	<div class="socials">
+		<div class="x"><h3>X (F.K.A Twitter)</h3>
+			<img src="" alt="">
+			<a href="https://x.com/AdebolaBua29879"><button>Visit page</button></a>
+		</div>
+		<div class="instagram"><h3>Instagram</h3>
+			<img src="" alt="">
+			<a href="https://www.instagram.com/buari_debola"><button>Visit page</button></a>
+		</div>
+		<div class="facebook"><h3>Facebook</h3>
+			<img src="" alt="">
+			<a href="https://www.facebook.com/profile.php?id=61573544115201"><button>Visit page</button></a>
+		</div>
+	</div>
+	<a href="contactpage.html"><button class="contact-button">CONTACT ME</button></a>
+</section>
+<footer>&copy; copyright 2025. All rights reserved</footer>
+<script type="text/javascript">// Get the dropdown button and content
+const dropdown = document.querySelector('.dropdown');
+const toggleButton = document.querySelector('.menu-button');
+
+toggleButton.addEventListener('click', () => {
+  dropdown.classList.toggle('show');
+});
+
+document.addEventListener('click', (e) => {
+  if (!toggleButton.contains(e.target) && !dropdown.contains(e.target)) {
+    dropdown.classList.remove('show');
+  }
+});
+
+const pageUp = document.querySelector('.page-up');
+
+pageUp.addEventListener('click', () => {
+	window.scrollTo({ top: 0, behavior: 'smooth'});
+});
+
+const aboutMe = document.querySelector('.about-me');
+
+aboutMe.addEventListener('click', () => {
+	window.scrollTo({ top: 550, behavior: 'smooth'});
+});
+
+const myProjects = document.querySelector('.my-projects');
+
+myProjects.addEventListener('click', () => {
+	window.scrollTo({ top: 795, behavior: 'smooth'});
+});
+
+const myUidesigns = document.querySelector('.my-uiprojects');
+
+myUidesigns.addEventListener('click', () => {
+	window.scrollTo({ top: 1600, behavior: 'smooth'});
+});
+
+const mySocials = document.querySelector('.my-socials');
+
+mySocials.addEventListener('click', () => {
+	window.scrollTo({ top: 2470, behavior: 'smooth'});
+});
+
+</script>
 </body>
 </html>
