@@ -10,12 +10,17 @@
 	margin: 0;
 	padding: 0;
 }
-header{
+.header{
 	background-image: linear-gradient(to bottom, rgba(11, 35, 81, 1.0) 35%, blue);
 	margin-bottom: 100px;
 	padding-bottom: 90px;
+	opacity: 0;
+	transition: opacity 0.5s ease-in-out;
 }
-header h1{
+.header.active {
+  opacity: 1;
+}	
+.header h1{
 	text-align: center;
 	padding-top: 10px;
 	color: white;
@@ -596,9 +601,9 @@ h5{
 	</style>
 </head>
 <body>
-	<header>
+	<section class="header">
 		<h1 id="welcome">Welcome to my portfolio</h1>
-<section id="home">
+<div id="home">
 	<div class="intro-wrapper">
 	<div id="intro">
 		<h2>My Technical Expertise</h2>
@@ -637,8 +642,8 @@ h5{
 		</ul>
 	</div>
 </div>
+</div>
 </section>
-</header>
 <div class="page-up"><img src="images/right.png"></div>
 <div class="menu">
 	<ul>
@@ -765,6 +770,36 @@ const social = document.getElementById('social');
 mySocials.addEventListener('click', () => {
 	social.scrollIntoView({ behavior: 'smooth'});
 });
+
+// Get all sections
+const section = document.querySelector('.header');
+
+// Function to check if section is in viewport
+function isSectionInView() {
+  const rect = section.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
+
+// Function to toggle active class on sections
+function toggleActiveClass() {
+    if (isSectionInView()) {
+      section.classList.add('active');
+    } else {
+      section.classList.remove('active');
+    }
+}
+
+// Add event listener to window scroll
+window.addEventListener('scroll', toggleActiveClass);
+
+// Initialize active class on initial scroll position
+toggleActiveClass();
+
 </script>
 </body>
 </html>
